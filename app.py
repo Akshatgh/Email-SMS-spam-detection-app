@@ -8,17 +8,7 @@ from streamlit_lottie import st_lottie
 import requests
 import os
 
-# Define a custom directory to store NLTK data
-nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
-os.makedirs(nltk_data_dir, exist_ok=True)
-
-# Set the NLTK data path
-nltk.data.path.append(nltk_data_dir)
-
-# Download necessary NLTK resources to the custom directory
-nltk.download('punkt', download_dir=nltk_data_dir)
-nltk.download('stopwords', download_dir=nltk_data_dir)
-
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), 'nltk_data'))
 
 
 def load_lottieurl(url):
