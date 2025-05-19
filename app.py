@@ -7,8 +7,18 @@ from nltk.stem.porter import PorterStemmer
 from streamlit_lottie import st_lottie
 import requests
 
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
 
 def load_lottieurl(url):
     r = requests.get(url)
