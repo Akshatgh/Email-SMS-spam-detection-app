@@ -8,7 +8,8 @@ from streamlit_lottie import st_lottie
 import requests
 import os
 
-nltk.data.path.append(os.path.join(os.path.dirname(__file__), 'nltk_data'))
+nltk.download('punkt')
+nltk.download('stopwords')
 
 
 def load_lottieurl(url):
