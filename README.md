@@ -37,7 +37,7 @@ This is a machine learning web app built using **Streamlit**, which can classify
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/Akshatgh/Email-SMS-spam-detection-app.git
 cd your-repo-name
 
 # Create a virtual environment (optional but recommended)
